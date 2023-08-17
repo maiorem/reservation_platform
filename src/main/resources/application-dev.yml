@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/talk_reserve
+    username: talk
+    password: talk
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        dialects: org.hibernate.dialect.MySQL57Dialect
+        format_sql: true
+    database: mysql
+    generate-ddl: true
+    open-in-view: false
+    show-sql: true
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: dksjfldskajfdlk!
